@@ -1,4 +1,8 @@
 const router = require('express').Router();
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
+const Jokes = require('../jokes/jokesModel')
+
 
 router.post('/register', (req, res) => {
   res.end('implement register, please!');
