@@ -44,16 +44,33 @@ Your finished project must include all of the following requirements (further in
 
 ## Submission format
 
-- [ ] Submit via Codegrade by pushing commits to your `main` branch on Github.
-- [ ] Check Codegrade before the deadline to compare its results against your local tests.
-- [ ] Check Codegrade on the days following the Sprint Challenge for reviewer feedback.
-- [ ] New commits will be evaluated by Codegrade if pushed _before_ the sprint challenge deadline.
+- [ x ] Submit via Codegrade by pushing commits to your `main` branch on Github.
+- [ x ] Check Codegrade before the deadline to compare its results against your local tests.
+- [ x ] Check Codegrade on the days following the Sprint Challenge for reviewer feedback.
+- [ x ] New commits will be evaluated by Codegrade if pushed _before_ the sprint challenge deadline.
 
 ## Interview Questions
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics.
 
 1. Differences between using _sessions_ or _JSON Web Tokens_ for authentication.
+
+Session cookies use server memory to store user data. 
+
+Whereas, JSON web tokens are used on the client side.
+
 2. What does `bcryptjs` do to help us store passwords in a secure manner?
-3. How are unit tests different from integration and end-to-end testing?
+
+bcrypt allows us to hash user passwords before storing on the database. 
+
+It is best practice to not store the actual passwords of users in the database in case of data breach. user passwords are safe because the hash version of the password is stored.
+
+3. How are unit tests different from integration and end-to-end testing? 
+
+Integration tests check how different parts of the application work together.
+
+Unit tests check that individual, isolated parts of the code works correctly.
+
 4. How does _Test Driven Development_ change the way we write applications and tests?
+
+because it relies on software requirements being converted to test cases before the software is fully developed. And tracking all software development by repeatedly testing the software against all test cases.
