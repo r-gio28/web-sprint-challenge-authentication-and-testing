@@ -8,3 +8,29 @@ const add = async (newUser) => {
 const findUsers = () => {
     return db('users')
 }
+
+const findByUsername = (username) => {
+    return db('users')
+        .select('*')
+        .where('username', username)
+        .first()
+}
+
+const findByUserId = (id) => {
+    return db('users')
+        .select('*')
+        .where('id', id)
+        .first()
+}
+
+function findBy(filter) {
+    return db('users').where(filter).orderBy('id')
+}
+
+module.exports = {
+    add,
+    findUsers,
+    findByUsername,
+    findByUserId,
+    findBy,
+}
